@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/all.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <div class="wrapper"> 
+                    <div class="arrow-steps clearfix">
+                              <div class="step current"> <span> Status1</span>
+                                <span><div class="wrapper-1">
+                                <div class="circle-1">
+                                </div>
+                                <div class="checck">
+                                    <i class="far fa-check-circle"></i>
+                                </div>
+                              </div></span>
+                            </div>
+                              <div class="step"> <span>New</span> <span><div class="wrapper-1">
+                                <div class="circle-1">
+                                </div>
+                        
+                              </div></span> </div>
+                              <div class="step"> <span> Working</span> <span><div class="wrapper-1">
+                                <div class="circle-1">
+                                </div>
+                              </div></span> </div>
+                              <div class="step"> <span>Nurturing</span> <span><div class="wrapper-1">
+                                <div class="circle-1">
+                                </div>
+                              </div></span> </div>
+                              <div class="step last"> <span>Converted</span> <span><div class="wrapper-1">
+                                <div class="circle-1">
+                                </div>
+                              </div></span> </div>
+                          </div>
+                    </div>
+            </div>
+        </div>
+        <div class="row select-sec">
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <nav class="navbar navbar-dark bg-#3c3c3c navbar-expand-xl ">
+                    <div class="collapse navbar-collapse" id="navbar-list-2">
+                      <ul class="navbar-nav">
+                        <li class="nav-item">
+                          <a class="nav-link " href="#">ACTIVITY</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">INFORMATION</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </nav>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-8 col-xl-8 ">
+                <div class="form-sec">
+                    <div class="nav">
+                        <ul>
+                            <li>
+                                <a href="#">Log Calls </a>
+                            </li>
+                            <li>
+                                <a href="#">Tasks</a>
+                            </li>
+                            <li>
+                                <a href="#">Event</a>
+                            </li>
+                            <li>
+                                <a href="#">Make Note </a>
+                            </li>
+                            <li>
+                                <a href="#">Add Attachement</a>
+                            </li>
+                            <li>
+                                <a href="#">Activity Set</a>
+                            </li>
+                            <li>
+                                <a href="#">Custom Field</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="topic">
+                        <h6>New Task</h6>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                            <div class="fields-sec">
+                                <label>Task Type <span>*</span></label>
+                                <select id="type">
+                                    <option value=""></option>
+                                    <option value="TO DO">TO DO</option>
+                                    <option value="On Process">On Process</option>
+                                    <option value="Finished">Finished</option>
+                                </select>
+
+                                <label>Assigned to <span>*</span></label>
+                                <select id="assign">
+                                    <option value=""></option>
+                                    <option value="Ravi Kumar">Ravi Kumar</option>
+                                    <option value="Anand pai">Anand pai</option>
+                                    <option value="Jayaram Ramesh">Jayaram Ramesh</option>
+                                    <option value="Allen Gomez">Allen Gomez</option>
+                                </select>
+                               <div class="row">
+                                <div class="col-sm-12 col-md-12 col-lg-6">
+                                    <label>Start Date</label>
+                                    <input id="start_date" class="date-pic" type="date">
+                                   
+                                   </div>
+                                   <div class="col-sm-12 col-md-12 col-lg-6">
+                                    <label class="end-lab">End Date</label>
+                                    <input id="end_date" class="date-pic-1" type="date">
+                                   </div>
+                               </div>
+                               <label>Remind On</label>
+                                    <input id="remind_date" class="date-pic-2" type="date">
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                            <div class="fields-sec-1">
+                                <label>Subject</label>
+                                <input id="sub" type="text">
+                                <label>Details</label>
+                                <!-- <input id="detail" class="det" type="text"> -->
+                                <textarea id="detail"></textarea>
+                                <button onclick="resetForm()" class="btn-sec-cancel">Cancel</button>
+                                <button onclick="onFormSubmit()" class="btn-sec-apply">Apply</button>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="topic-1">
+                        <h6>Task List</h6>
+                    </div>
+                    <div class="employees-table">
+                        <table class="list" id="employeeList">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Type</th>
+                                    <th>Assigned to</th>
+                                    <th>Start Date</th>
+                                    <th>End date</th>
+                                    <th>Remind On</th>
+                                    <th>Subject</th>
+                                    <th>Details</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4 form-sec-11">
+                <div class="form-sec-1">
+                <select class="filter" id="type">
+                    <option value="" disabled selected hidden>Filter by date</option>
+                    <option value="TO DO">TO DO</option>
+                    <option value="On Process">On Process</option>
+                    <option value="Finished">Finished</option>
+                </select>
+                <hr class="hrr">
+                <div class="border-sec">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-12 col-lg-3 filter-icons-sec">
+                            <div class="phone-i">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                          
+                        </div>
+                        <div class="col-sm-12 col-md-12 col-lg-9 filter-sec">
+                            <h6>
+                                Informed Product Features
+                            </h6>
+                            <p>You contacted with <span>Charles Gomez</span></p>
+                            <p>13 Nov 2018. &nbsp;&nbsp;05:49 AM</p>
+                            <i class="fa-solid fa-angle-down"></i>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="line"></div>
+                <div class="border-sec">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-12 col-lg-3 filter-icons-sec">
+                            <div class="check-i">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                          
+                        </div>
+                        <div class="col-sm-12 col-md-12 col-lg-9 filter-sec">
+                            <h6>
+                                Informed Product Features
+                            </h6>
+                            <p>You contacted with <span>Charles Gomez</span></p>
+                            <p>13 Nov 2018. &nbsp;&nbsp;05:49 AM</p>
+                            <i class="fa-solid fa-angle-down"></i>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="line"></div>
+                <div class="border-sec">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-12 col-lg-3 filter-icons-sec">
+                            <div class="doc-i">
+                                <i class="fa-regular fa-file-lines"></i>
+                            </div>
+                          
+                        </div>
+                        <div class="col-sm-12 col-md-12 col-lg-9 filter-sec">
+                            <h6>
+                                Informed Product Features
+                            </h6>
+                            <p>You contacted with <span>Charles Gomez</span></p>
+                            <p>13 Nov 2018. &nbsp;&nbsp;05:49 AM</p>
+                            <i class="fa-solid fa-angle-down"></i>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="line"></div>
+                <div class="border-sec">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-12 col-lg-3 filter-icons-sec">
+                            <div class="phone-i">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                          
+                        </div>
+                        <div class="col-sm-12 col-md-12 col-lg-9 filter-sec">
+                            <h6>
+                                Informed Product Features
+                            </h6>
+                            <p>You contacted with <span>Charles Gomez</span></p>
+                            <p>13 Nov 2018. &nbsp;&nbsp;05:49 AM</p>
+                            <i class="fa-solid fa-angle-down"></i>
+                            
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/script.js"></script>
+    <script src="./js/jquery.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+</body>
+
+</html>
